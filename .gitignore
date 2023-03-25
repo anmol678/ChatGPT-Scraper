@@ -1,0 +1,8 @@
+## User settings
+xcuserdata/
+
+Chat.xcodeproj/xcuserdata/*.xcuserdatad/xcschemes/xcschememanagement.plist
+
+## Xcode 8 and earlier
+*.xcscmblueprint
+*.xccheckout

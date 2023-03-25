@@ -15,12 +15,15 @@
     },
 
     "background": {
-        "service_worker": "background.js"
+        "scripts": [
+            "turndown.js",
+            "background.js"
+        ]
     },
 
     "content_scripts": [{
         "js": [ "content.js" ],
-        "matches": [ "*://example.com/*" ]
+        "matches": [ "*://chat.openai.com/*" ]
     }],
 
     "action": {

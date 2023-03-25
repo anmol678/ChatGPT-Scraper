@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		794D8DEE29CED28400752F3F /* turndown.js in Resources */ = {isa = PBXBuildFile; fileRef = 794D8DED29CED28400752F3F /* turndown.js */; };
+		794D8DEF29CED28400752F3F /* turndown.js in Resources */ = {isa = PBXBuildFile; fileRef = 794D8DED29CED28400752F3F /* turndown.js */; };
 		79FDAE8A29CBE4ED00946151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDAE8929CBE4ED00946151 /* AppDelegate.swift */; };
 		79FDAE8C29CBE4ED00946151 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDAE8B29CBE4ED00946151 /* SceneDelegate.swift */; };
 		79FDAE8F29CBE4ED00946151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FDAE8D29CBE4ED00946151 /* LaunchScreen.storyboard */; };
@@ -90,6 +92,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		794D8DED29CED28400752F3F /* turndown.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = turndown.js; sourceTree = "<group>"; };
 		79FDAE7129CBE4EC00946151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		79FDAE7229CBE4EC00946151 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		79FDAE7329CBE4EC00946151 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
@@ -208,6 +211,7 @@
 				79FDAE7F29CBE4ED00946151 /* popup.html */,
 				79FDAE8029CBE4ED00946151 /* popup.css */,
 				79FDAE8129CBE4ED00946151 /* popup.js */,
+				794D8DED29CED28400752F3F /* turndown.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -422,6 +426,7 @@
 				79FDAEC329CBE4ED00946151 /* _locales in Resources */,
 				79FDAECB29CBE4ED00946151 /* content.js in Resources */,
 				79FDAED129CBE4ED00946151 /* popup.js in Resources */,
+				794D8DEE29CED28400752F3F /* turndown.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +439,7 @@
 				79FDAECE29CBE4ED00946151 /* popup.html in Resources */,
 				79FDAEC629CBE4ED00946151 /* images in Resources */,
 				79FDAEC829CBE4ED00946151 /* manifest.json in Resources */,
+				794D8DEF29CED28400752F3F /* turndown.js in Resources */,
 				79FDAEC429CBE4ED00946151 /* _locales in Resources */,
 				79FDAECC29CBE4ED00946151 /* content.js in Resources */,
 				79FDAED229CBE4ED00946151 /* popup.js in Resources */,
