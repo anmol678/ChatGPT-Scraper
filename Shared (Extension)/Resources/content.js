@@ -41,7 +41,7 @@ async function processTitleElement(index) {
     
   const titleElements = document.querySelectorAll('div.flex-1.text-ellipsis.max-h-5.overflow-hidden.break-all.relative');
   
-    if (index >= titleElements.length || index > 4) {
+    if (index >= titleElements.length) {
         const showMoreButton = document.querySelector("button.btn-dark");
         if (showMoreButton) {
             showMoreButton.click();
