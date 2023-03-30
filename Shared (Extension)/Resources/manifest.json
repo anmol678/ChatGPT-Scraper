@@ -23,7 +23,7 @@
 
     "content_scripts": [{
         "js": [ "content.js" ],
-        "matches": [ "*://chat.openai.com/*" ]
+        "matches": [ "<all_urls>" ]
     }],
 
     "action": {
@@ -38,5 +38,5 @@
         }
     },
 
-    "permissions": [ ]
+    "permissions": [ "tabs" ]
 }

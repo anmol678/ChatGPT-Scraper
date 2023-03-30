@@ -2,9 +2,22 @@
 let chatData = [];
 let currentTitleElementIndex = 0;
 
+browser.tabs.onActivated.addListener(handleTabActivated);
+
+async function handleTabActivated(tabID) {
+  const tab = await browser.tabs.get(tabID);
+  const url = tab.url;
+  return url.includes('chat.openai.com') ? 'GPT': 'default';
+}
+
+browser.tabs.query({ active: true, currentWindow: true }).then(([tab]) => {
+  handleTabActivated(tab.id);
+});
+
 browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
   if (message.action === 'getCount') {
       sendResponse(currentTitleElementIndex);
+      return true;
   } else if (message.action === 'storeChatData') {
       
     const { id, messages, name, model } = message.chat;
@@ -23,7 +36,13 @@ browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     browser.tabs.sendMessage(tab[0].id, { action: 'saveJSON', data: chatData.reverse() });
     chatData = []; // Reset chat data after saving the file
     currentTitleElementIndex = 0;
+  } else if (message.action === 'requestUIUpdate') {
+    const tab = await browser.tabs.query({ active: true, currentWindow: true });
+    const ui = await handleTabActivated(tab[0].id);
+    sendResponse(ui)
+    return true;
   }
+
 });
 
 const turndownService = new TurndownService();
