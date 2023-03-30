@@ -1,7 +1,7 @@
 
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === 'scrape') {
-    processTitleElement(message.count ?? 0)
+    processChat(message.count ?? 0)
       .then(() => {
         
       })
@@ -13,11 +13,13 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
-async function processTitleElement(index) {
+async function processChat(index) {
     
     const saveChat = async () => {
         return new Promise(async (resolve) => {
             const id = window.location.href.match(/\/chat\/([\w-]+)$/)[1];
+
+            const model = document.querySelector('div.flex.w-full.items-center')?.innerHTML.split(' ')[1]
 
             // Collect the chat messages
             const messages = Array.from(
@@ -34,7 +36,7 @@ async function processTitleElement(index) {
             );
 
             // Create the chat object
-            const chat = { id, messages };
+            const chat = { id, messages, model };
             resolve(chat);
         });
     }
@@ -46,11 +48,11 @@ async function processTitleElement(index) {
         if (showMoreButton) {
             showMoreButton.click();
             await new Promise((resolve) => setTimeout(resolve, 1000));
-            processTitleElement(index);
+            processChat(index);
             return;
         }
        
-        console.log('Finished processing title elements');
+        console.log('Finished processing all chats');
         browser.runtime.sendMessage({ action: 'processCompleted' });
         return;
     }

@@ -7,10 +7,10 @@ browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
       sendResponse(currentTitleElementIndex);
   } else if (message.action === 'storeChatData') {
       
-    const { id, messages, name } = message.chat;
+    const { id, messages, name, model } = message.chat;
     try {
       const mkMessages = messages.map(({ role, content: c }) => ({ role, content: convertHtmlToMarkdown(c) }) );
-      chatData.push({ id, messages: mkMessages, name });
+      chatData.push({ id, messages: mkMessages, name, model });
     } catch (err) {
       console.log(err);
     }
