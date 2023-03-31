@@ -41,6 +41,8 @@ browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     const ui = await handleTabActivated(tab[0].id);
     sendResponse(ui)
     return true;
+  } else if (message.action === 'summarizeWebpageContent') {
+    console.log(message.mainContent);
   }
 
 });

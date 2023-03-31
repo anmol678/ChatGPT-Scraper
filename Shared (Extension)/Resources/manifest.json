@@ -30,6 +30,10 @@
             "js": [ "content.js" ],
             "matches": [ "<all_urls>" ]
         },
+        {
+            "js": [ "readability.js" ],
+            "matches": [ "<all_urls>" ]
+        }
     ],
 
     "action": {

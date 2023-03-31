@@ -10,8 +10,6 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
       });
   } else if (message.action === 'saveJSON') {
       downloadJSON(message.data);
-  } else if (message.action === 'getText') {
-    console.log(document.body.innerText)
   }
 });
 
