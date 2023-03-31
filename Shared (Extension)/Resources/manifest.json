@@ -21,10 +21,16 @@
         ]
     },
 
-    "content_scripts": [{
-        "js": [ "content.js" ],
-        "matches": [ "<all_urls>" ]
-    }],
+    "content_scripts": [
+        {
+            "js": [ "scrapeChatGPT.js" ],
+            "matches": [ "*://chat.openai.com/*" ]
+        },
+        {
+            "js": [ "content.js" ],
+            "matches": [ "<all_urls>" ]
+        },
+    ],
 
     "action": {
         "default_popup": "popup.html",
