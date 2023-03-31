@@ -3,10 +3,15 @@ A Safari Web Extension to export all conversations from ChatGPT as a JSON file
 
 ### Upcoming Features
 
-1. **Updated Popup UI:** A refreshed and modern UI with more options.
+1. **Website specific functionality:** different actions based on the webpage.
 2. **Selective Chat Export:** Choose specific chats to export, giving you more control.
-3. **Save Model Type:** Save the model used for each conversation.
-4. **Alternate Chat Clients:** Get suggestions for the best ChatGPT clients.
+3. Support for summarizing and chatting about content on the webpage.
+4. Support for interacting with YouTube videos.
+5. Select specific text on webpage to summarize or chat about.
+
+### Features
+
+1. Scrape ChatGPT to export all conersations as JSON file.
 
 ### Installation
 
@@ -22,6 +27,7 @@ A Safari Web Extension to export all conversations from ChatGPT as a JSON file
 1. Open [ChatGPT](https://chat.openai.com).
 2. Click the extension's toolbar button to open the popup window.
 3. Click the "Save chat" button to start the scraping process. The extension will automatically navigate to all conversations, gather the chat data, and save it as a JSON file in your default downloads directory.
+4. You can import this file to transfer all your conversations to a customizable GPT interface like [ChatbotUI](https://www.chatbotui.com).
 
 ### Notes
 
