@@ -1,3 +1,7 @@
+import GPTService from './gptService.js';
+
+const apiKey = process.env.OPENAI_API_KEY;
+const gptService = new GPTService(apiKey);
 
 let chatData = [];
 let currentTitleElementIndex = 0;
@@ -19,7 +23,7 @@ browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
       sendResponse(currentTitleElementIndex);
       return true;
   } else if (message.action === 'storeChatData') {
-      
+
     const { id, messages, name, model } = message.chat;
     try {
       const mkMessages = messages.map(({ role, content: c }) => ({ role, content: convertHtmlToMarkdown(c) }) );
@@ -27,7 +31,7 @@ browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     } catch (err) {
       console.log(err);
     }
-    
+
     currentTitleElementIndex++;
     const tab = await browser.tabs.query({ active: true, currentWindow: true });
     browser.tabs.sendMessage(tab[0].id, { action: 'scrape', count: currentTitleElementIndex });
@@ -42,7 +46,16 @@ browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     sendResponse(ui)
     return true;
   } else if (message.action === 'summarizeWebpageContent') {
-    console.log(message.mainContent);
+      try {
+        const summary = await gptService.summarizeText(message.mainContent);
+        console.log('Summary:', summary);
+//        sendResponse({ summary });
+      } catch (error) {
+//        sendResponse({ error });
+        console.error('Error generating summary:', error);
+      }
+
+//      return true;
   }
 
 });
@@ -52,5 +65,3 @@ const turndownService = new TurndownService();
 function convertHtmlToMarkdown(html) {
   return turndownService.turndown(`${html}`);
 }
-
-

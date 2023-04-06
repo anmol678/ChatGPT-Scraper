@@ -17,7 +17,7 @@
     "background": {
         "scripts": [
             "turndown.js",
-            "background.js"
+            "background.bundle.js"
         ]
     },
 

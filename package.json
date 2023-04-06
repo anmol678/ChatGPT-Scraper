@@ -1,14 +1,31 @@
 {
   "name": "chat",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Safari Web Extension to export all conversations from ChatGPT as a JSON file",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
-  "author": "",
+  "author": "Anmol Jain",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "turndown": "^7.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anmol678/ChatGPT-Scraper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anmol678/ChatGPT-Scraper/issues"
+  },
+  "homepage": "https://github.com/anmol678/ChatGPT-Scraper#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.78.0",
+    "webpack-cli": "^5.0.1"
   }
 }
