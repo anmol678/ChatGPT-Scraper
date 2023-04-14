@@ -9,10 +9,13 @@ const envKeys = Object.keys(env).reduce((prev, next) => {
 }, {});
 
 module.exports = {
-  entry: './Shared (Extension)/Resources/Background/background.js',
+  entry: {
+    background: './Shared (Extension)/Resources/Background/background.js',
+    content: './Shared (Extension)/Resources/Content/content.js',
+  },
   output: {
-    filename: 'background.bundle.js',
-    path: path.resolve(__dirname, './Shared (Extension)/Resources/Background'),
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, './Shared (Extension)/Resources/'),
   },
   module: {
     rules: [

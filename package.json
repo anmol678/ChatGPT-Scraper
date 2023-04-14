@@ -10,6 +10,7 @@
   "author": "Anmol Jain",
   "license": "ISC",
   "dependencies": {
+    "@mozilla/readability": "^0.4.4",
     "dotenv": "^16.0.3",
     "turndown": "^7.1.2"
   },

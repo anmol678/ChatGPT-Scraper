@@ -27,11 +27,7 @@
             "matches": [ "*://chat.openai.com/*" ]
         },
         {
-            "js": [ "content.js" ],
-            "matches": [ "<all_urls>" ]
-        },
-        {
-            "js": [ "readability.js" ],
+            "js": [ "content.bundle.js" ],
             "matches": [ "<all_urls>" ]
         }
     ],

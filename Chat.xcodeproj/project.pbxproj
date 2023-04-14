@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79340CF029DF7641008ABDB3 /* background.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 79340CEE29DF7641008ABDB3 /* background.bundle.js */; };
+		79340CF129DF7641008ABDB3 /* background.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 79340CEE29DF7641008ABDB3 /* background.bundle.js */; };
+		79340CF229DF7641008ABDB3 /* content.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 79340CEF29DF7641008ABDB3 /* content.bundle.js */; };
+		79340CF329DF7641008ABDB3 /* content.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 79340CEF29DF7641008ABDB3 /* content.bundle.js */; };
 		793E098529D661C8001FBAE7 /* scrapeChatGPT.js in Resources */ = {isa = PBXBuildFile; fileRef = 793E098429D661C8001FBAE7 /* scrapeChatGPT.js */; };
 		793E098629D661C8001FBAE7 /* scrapeChatGPT.js in Resources */ = {isa = PBXBuildFile; fileRef = 793E098429D661C8001FBAE7 /* scrapeChatGPT.js */; };
-		793E098829D6690F001FBAE7 /* readability.js in Resources */ = {isa = PBXBuildFile; fileRef = 793E098729D6690F001FBAE7 /* readability.js */; };
-		793E098929D6690F001FBAE7 /* readability.js in Resources */ = {isa = PBXBuildFile; fileRef = 793E098729D6690F001FBAE7 /* readability.js */; };
 		794D8DEE29CED28400752F3F /* turndown.js in Resources */ = {isa = PBXBuildFile; fileRef = 794D8DED29CED28400752F3F /* turndown.js */; };
 		794D8DEF29CED28400752F3F /* turndown.js in Resources */ = {isa = PBXBuildFile; fileRef = 794D8DED29CED28400752F3F /* turndown.js */; };
 		79CF7D9C29DEA1530008462B /* gptService.js in Resources */ = {isa = PBXBuildFile; fileRef = 79CF7D9B29DEA1530008462B /* gptService.js */; };
 		79CF7D9D29DEA1530008462B /* gptService.js in Resources */ = {isa = PBXBuildFile; fileRef = 79CF7D9B29DEA1530008462B /* gptService.js */; };
-		79CF7D9F29DEA4BA0008462B /* background.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 79CF7D9E29DEA4BA0008462B /* background.bundle.js */; };
-		79CF7DA029DEA4BA0008462B /* background.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 79CF7D9E29DEA4BA0008462B /* background.bundle.js */; };
 		79FDAE8A29CBE4ED00946151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDAE8929CBE4ED00946151 /* AppDelegate.swift */; };
 		79FDAE8C29CBE4ED00946151 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDAE8B29CBE4ED00946151 /* SceneDelegate.swift */; };
 		79FDAE8F29CBE4ED00946151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FDAE8D29CBE4ED00946151 /* LaunchScreen.storyboard */; };
@@ -100,11 +100,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		79340CEE29DF7641008ABDB3 /* background.bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = background.bundle.js; sourceTree = "<group>"; };
+		79340CEF29DF7641008ABDB3 /* content.bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = content.bundle.js; sourceTree = "<group>"; };
 		793E098429D661C8001FBAE7 /* scrapeChatGPT.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = scrapeChatGPT.js; sourceTree = "<group>"; };
-		793E098729D6690F001FBAE7 /* readability.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = readability.js; sourceTree = "<group>"; };
 		794D8DED29CED28400752F3F /* turndown.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = turndown.js; sourceTree = "<group>"; };
 		79CF7D9B29DEA1530008462B /* gptService.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = gptService.js; sourceTree = "<group>"; };
-		79CF7D9E29DEA4BA0008462B /* background.bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = background.bundle.js; sourceTree = "<group>"; };
 		79FDAE7129CBE4EC00946151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		79FDAE7229CBE4EC00946151 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		79FDAE7329CBE4EC00946151 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
@@ -169,10 +169,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79340CEA29DF714A008ABDB3 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				79FDAE7E29CBE4ED00946151 /* content.js */,
+				793E098429D661C8001FBAE7 /* scrapeChatGPT.js */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		79CF7DA129DEA7740008462B /* Background */ = {
 			isa = PBXGroup;
 			children = (
-				79CF7D9E29DEA4BA0008462B /* background.bundle.js */,
 				79CF7D9B29DEA1530008462B /* gptService.js */,
 				794D8DED29CED28400752F3F /* turndown.js */,
 				79FDAE7D29CBE4ED00946151 /* background.js */,
@@ -226,16 +234,16 @@
 		79FDAE7929CBE4ED00946151 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				79340CEE29DF7641008ABDB3 /* background.bundle.js */,
+				79340CEF29DF7641008ABDB3 /* content.bundle.js */,
 				79FDAE7A29CBE4ED00946151 /* _locales */,
 				79FDAE7B29CBE4ED00946151 /* images */,
 				79FDAE7C29CBE4ED00946151 /* manifest.json */,
 				79CF7DA129DEA7740008462B /* Background */,
-				79FDAE7E29CBE4ED00946151 /* content.js */,
+				79340CEA29DF714A008ABDB3 /* Content */,
 				79FDAE7F29CBE4ED00946151 /* popup.html */,
 				79FDAE8029CBE4ED00946151 /* popup.css */,
 				79FDAE8129CBE4ED00946151 /* popup.js */,
-				793E098429D661C8001FBAE7 /* scrapeChatGPT.js */,
-				793E098729D6690F001FBAE7 /* readability.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -445,13 +453,13 @@
 			files = (
 				79FDAEC929CBE4ED00946151 /* background.js in Resources */,
 				79FDAECF29CBE4ED00946151 /* popup.css in Resources */,
-				79CF7D9F29DEA4BA0008462B /* background.bundle.js in Resources */,
-				793E098829D6690F001FBAE7 /* readability.js in Resources */,
 				793E098529D661C8001FBAE7 /* scrapeChatGPT.js in Resources */,
 				79FDAECD29CBE4ED00946151 /* popup.html in Resources */,
 				79FDAEC529CBE4ED00946151 /* images in Resources */,
+				79340CF229DF7641008ABDB3 /* content.bundle.js in Resources */,
 				79FDAEC729CBE4ED00946151 /* manifest.json in Resources */,
 				79FDAEC329CBE4ED00946151 /* _locales in Resources */,
+				79340CF029DF7641008ABDB3 /* background.bundle.js in Resources */,
 				79CF7D9C29DEA1530008462B /* gptService.js in Resources */,
 				79FDAECB29CBE4ED00946151 /* content.js in Resources */,
 				79FDAED129CBE4ED00946151 /* popup.js in Resources */,
@@ -465,13 +473,13 @@
 			files = (
 				79FDAECA29CBE4ED00946151 /* background.js in Resources */,
 				79FDAED029CBE4ED00946151 /* popup.css in Resources */,
-				79CF7DA029DEA4BA0008462B /* background.bundle.js in Resources */,
-				793E098929D6690F001FBAE7 /* readability.js in Resources */,
 				793E098629D661C8001FBAE7 /* scrapeChatGPT.js in Resources */,
 				79FDAECE29CBE4ED00946151 /* popup.html in Resources */,
 				79FDAEC629CBE4ED00946151 /* images in Resources */,
+				79340CF329DF7641008ABDB3 /* content.bundle.js in Resources */,
 				79FDAEC829CBE4ED00946151 /* manifest.json in Resources */,
 				794D8DEF29CED28400752F3F /* turndown.js in Resources */,
+				79340CF129DF7641008ABDB3 /* background.bundle.js in Resources */,
 				79CF7D9D29DEA1530008462B /* gptService.js in Resources */,
 				79FDAEC429CBE4ED00946151 /* _locales in Resources */,
 				79FDAECC29CBE4ED00946151 /* content.js in Resources */,

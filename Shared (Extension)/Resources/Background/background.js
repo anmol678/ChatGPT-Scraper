@@ -47,8 +47,8 @@ browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     return true;
   } else if (message.action === 'summarizeWebpageContent') {
       try {
-        const summary = await gptService.summarizeText(message.mainContent);
-        console.log('Summary:', summary);
+//        const summary = await gptService.summarizeText(message.mainContent);
+        console.log('Summary:', message.mainContent);
 //        sendResponse({ summary });
       } catch (error) {
 //        sendResponse({ error });
