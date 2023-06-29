@@ -3,11 +3,9 @@ A Safari Web Extension to export all conversations from ChatGPT as a JSON file
 
 ### Upcoming Features
 
-1. **Website specific functionality:** different actions based on the webpage.
-2. **Selective Chat Export:** Choose specific chats to export, giving you more control.
-3. Support for summarizing and chatting about content on the webpage.
-4. Support for interacting with YouTube videos.
-5. Select specific text on webpage to summarize or chat about.
+1. **Selective Chat Export:** Choose specific chats to export, giving you more control.
+2. **Exporting Chat Tree:** Export all messages for subtrees from regenerating a response.
+3. **Keyboard Shortcuts**
 
 ### Features
 
