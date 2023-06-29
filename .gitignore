@@ -13,3 +13,7 @@ run-dev.sh
 node_modules/
 
 .env
+
+*.bundle.js*
+
+scrapeTwitter.js

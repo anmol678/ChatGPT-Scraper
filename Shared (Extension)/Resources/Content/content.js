@@ -17,30 +17,32 @@ function getArticleTagContent() {
 }
 
 function getReadableText() {
-    try {
-        const documentClone = document.cloneNode(true);
-        const readability = new Readability(documentClone);
-        const article = readability.parse();
-        return article ? article.textContent.trim() : null;
-    } catch (error) {
-        console.error('Error', error);
-    }
+  try {
+    const documentClone = document.cloneNode(true);
+    const readability = new Readability(documentClone);
+    const article = readability.parse();
+    return article ? article.textContent.trim() : null;
+  } catch (error) {
+    console.error('Error', error);
+  }
 }
 
 function getMainContent() {
-//   let text = getSchemaOrgArticleBody();
-//   if (!text) {
-//     text = getArticleTagContent();
-//   }
-//   if (!text) {
-     const text = getReadableText();
-//   }
+  // let text = getSchemaOrgArticleBody();
+  // if (!text) {
+  //   text = getArticleTagContent();
+  // }
+  // if (!text) {
+  const text = getReadableText();
+  // }
 
-    console.log(text)
+  console.log(text)
 
   return text;
 }
 
-const t = getMainContent()
+if (!window.location.href.includes('twitter.com')) {
+  const t = getMainContent()
+}
 
 

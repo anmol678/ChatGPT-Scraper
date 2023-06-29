@@ -11,7 +11,11 @@ browser.tabs.onActivated.addListener(handleTabActivated);
 async function handleTabActivated(tabID) {
   const tab = await browser.tabs.get(tabID);
   const url = tab.url;
-  return url.includes('chat.openai.com') ? 'GPT': 'default';
+  return (
+    url.includes('chat.openai.com') ? 'GPT'
+    : url.includes('twitter.com') ? 'Twitter'
+    : 'default'
+  );
 }
 
 browser.tabs.query({ active: true, currentWindow: true }).then(([tab]) => {
@@ -47,8 +51,8 @@ browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     return true;
   } else if (message.action === 'summarizeWebpageContent') {
       try {
-//        const summary = await gptService.summarizeText(message.mainContent);
-        console.log('Summary:', message.mainContent);
+        const summary = await gptService.summarizeText(message.mainContent);
+        console.log('Summary:', summary);
 //        sendResponse({ summary });
       } catch (error) {
 //        sendResponse({ error });

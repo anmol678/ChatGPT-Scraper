@@ -27,6 +27,10 @@
             "matches": [ "*://chat.openai.com/*" ]
         },
         {
+            "js": [ "scrapeTwitter.js" ],
+            "matches": [ "*://twitter.com/*" ]
+        },
+        {
             "js": [ "content.bundle.js" ],
             "matches": [ "<all_urls>" ]
         }

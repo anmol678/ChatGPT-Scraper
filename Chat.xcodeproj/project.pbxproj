@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792E24D32A4941020080D3D8 /* scrapeTwitter.js in Resources */ = {isa = PBXBuildFile; fileRef = 792E24D22A4941020080D3D8 /* scrapeTwitter.js */; };
+		792E24D42A4941020080D3D8 /* scrapeTwitter.js in Resources */ = {isa = PBXBuildFile; fileRef = 792E24D22A4941020080D3D8 /* scrapeTwitter.js */; };
 		79340CF029DF7641008ABDB3 /* background.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 79340CEE29DF7641008ABDB3 /* background.bundle.js */; };
 		79340CF129DF7641008ABDB3 /* background.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 79340CEE29DF7641008ABDB3 /* background.bundle.js */; };
 		79340CF229DF7641008ABDB3 /* content.bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = 79340CEF29DF7641008ABDB3 /* content.bundle.js */; };
@@ -100,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		792E24D22A4941020080D3D8 /* scrapeTwitter.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = scrapeTwitter.js; sourceTree = "<group>"; };
 		79340CEE29DF7641008ABDB3 /* background.bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = background.bundle.js; sourceTree = "<group>"; };
 		79340CEF29DF7641008ABDB3 /* content.bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = content.bundle.js; sourceTree = "<group>"; };
 		793E098429D661C8001FBAE7 /* scrapeChatGPT.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = scrapeChatGPT.js; sourceTree = "<group>"; };
@@ -174,6 +177,7 @@
 			children = (
 				79FDAE7E29CBE4ED00946151 /* content.js */,
 				793E098429D661C8001FBAE7 /* scrapeChatGPT.js */,
+				792E24D22A4941020080D3D8 /* scrapeTwitter.js */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -457,6 +461,7 @@
 				79FDAECD29CBE4ED00946151 /* popup.html in Resources */,
 				79FDAEC529CBE4ED00946151 /* images in Resources */,
 				79340CF229DF7641008ABDB3 /* content.bundle.js in Resources */,
+				792E24D32A4941020080D3D8 /* scrapeTwitter.js in Resources */,
 				79FDAEC729CBE4ED00946151 /* manifest.json in Resources */,
 				79FDAEC329CBE4ED00946151 /* _locales in Resources */,
 				79340CF029DF7641008ABDB3 /* background.bundle.js in Resources */,
@@ -477,6 +482,7 @@
 				79FDAECE29CBE4ED00946151 /* popup.html in Resources */,
 				79FDAEC629CBE4ED00946151 /* images in Resources */,
 				79340CF329DF7641008ABDB3 /* content.bundle.js in Resources */,
+				792E24D42A4941020080D3D8 /* scrapeTwitter.js in Resources */,
 				79FDAEC829CBE4ED00946151 /* manifest.json in Resources */,
 				794D8DEF29CED28400752F3F /* turndown.js in Resources */,
 				79340CF129DF7641008ABDB3 /* background.bundle.js in Resources */,
