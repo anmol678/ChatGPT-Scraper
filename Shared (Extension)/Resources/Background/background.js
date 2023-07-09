@@ -6,11 +6,9 @@ const gptService = new GPTService(apiKey);
 let chatData = [];
 let currentTitleElementIndex = 0;
 
-browser.tabs.onActivated.addListener(handleTabActivated);
+// browser.tabs.onActivated.addListener(handleTabActivated);
 
-async function handleTabActivated(tabID) {
-  const tab = await browser.tabs.get(tabID);
-  const url = tab.url;
+async function handleTabActivated(url) {
   return (
     url.includes('chat.openai.com') ? 'GPT'
     : url.includes('twitter.com') ? 'Twitter'
@@ -19,7 +17,7 @@ async function handleTabActivated(tabID) {
 }
 
 browser.tabs.query({ active: true, currentWindow: true }).then(([tab]) => {
-  handleTabActivated(tab.id);
+  handleTabActivated(tab.url);
 });
 
 browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
@@ -30,7 +28,7 @@ browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
 
     const { id, messages, name, model } = message.chat;
     try {
-      const mkMessages = messages.map(({ role, content: c }) => ({ role, content: convertHtmlToMarkdown(c) }) );
+      const mkMessages = messages.map(({ role, content: c }) => ({ role, content: convertHtmlToMarkdown(c) }));
       chatData.push({ id, messages: mkMessages, name, model });
     } catch (err) {
       console.log(err);
@@ -45,8 +43,8 @@ browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     chatData = []; // Reset chat data after saving the file
     currentTitleElementIndex = 0;
   } else if (message.action === 'requestUIUpdate') {
-    const tab = await browser.tabs.query({ active: true, currentWindow: true });
-    const ui = await handleTabActivated(tab[0].id);
+    const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
+    const ui = await handleTabActivated(tab.url);
     sendResponse(ui)
     return true;
   } else if (message.action === 'summarizeWebpageContent') {
